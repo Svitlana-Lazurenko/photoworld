@@ -1,0 +1,118 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+a {
+  text-decoration: none;
+}
+
+body,
+header {
+  background: #59c173; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5d26c1,
+    #a17fe0,
+    #59c173
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5d26c1,
+    #a17fe0,
+    #59c173
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  top: -1px;
+  height: 80px;
+
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  margin-left: 50px;
+}
+
+.logo-link {
+  color: white;
+
+  &:hover {
+    animation-name: changeColor;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
+
+.search-form {
+  display: flex;
+}
+
+.gallery {
+  margin: 15px 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card-link {
+  flex-basis: calc((100% - 45px) / 4);
+  border-radius: 15px;
+  overflow: hidden;
+
+  background: #1b6f86;
+  box-shadow: 5px 7px 18px 0px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 5px 7px 18px 0px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 5px 7px 18px 0px rgba(0, 0, 0, 0.77);
+
+  transition: background 500ms linear;
+
+  &:hover {
+    background: #2cb7dd;
+  }
+}
+
+.thumb {
+  height: 200px;
+  width: 100%;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.info {
+  margin: 5px 0 5px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.info-item {
+  margin: 0;
+  flex-basis: calc((100% - 2px) / 2);
+  font-size: 13px;
+  color: rgb(5, 6, 45);
+}
+
+@keyframes changeColor {
+  0% {
+    color: rgb(103, 199, 223);
+  }
+
+  50% {
+    color: rgb(154, 221, 137);
+  }
+
+  100% {
+    color: rgb(224, 121, 181);
+  }
+}
